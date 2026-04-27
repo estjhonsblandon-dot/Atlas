@@ -1,0 +1,139 @@
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #F4E4D7;      /* Crema */
+    --accent-soft: #F8C7B0;   /* Melocotón */
+    --primary-color: #D4735E; /* Terracota */
+    --text-dark: #6D4C41;     /* Café Oscuro */
+    --white: #FFFFFF;
+    --shadow: rgba(109, 76, 65, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Espacio para móviles */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px var(--shadow);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Ajuste para pantallas pequeñas (Celulares) */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+h2 {
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1.4rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding-left: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--accent-soft);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(212, 115, 94, 0.2);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.switch-auth {
+    margin-top: 1.8rem;
+    font-size: 0.9rem;
+}
+
+.switch-auth a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}

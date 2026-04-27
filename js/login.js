@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('form');
+    const loginForm = document.getElementById('loginForm');
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -7,19 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        // Intentar obtener el usuario desde localStorage
         const usuarioGuardado = localStorage.getItem(email);
 
         if (usuarioGuardado) {
-            // Convertir el texto guardado de vuelta a un objeto JS
             const datosUsuario = JSON.parse(usuarioGuardado);
 
-            // Validar contraseña
             if (datosUsuario.password === password) {
                 alert(`¡Bienvenido a ATLAS, ${datosUsuario.nombre}!`);
-                
-                // Aquí podrías redirigir a la página del mapa o dashboard
-                // window.location.href = 'mapa.html'; 
+                // Redirigir a tu página principal aquí
+                // window.location.href = 'dashboard.html'; 
             } else {
                 alert('Contraseña incorrecta. Inténtalo de nuevo.');
             }
